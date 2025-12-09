@@ -112,10 +112,56 @@ const users = [
 
 // console.log(getInactiveUsers(users)); // [об'єкт Moore Hensley, об'єкт Ross Vazquez, об'єкт Blackburn Dotson]
 
-//5 
+//5
 // const getUserWithEmail = (users, email) => {
 //  return users.find(person => person.email === email);
 // };
 
 // console.log(getUserWithEmail(users, 'shereeanthony@kog.com')); // {об'єкт користувача Sheree Anthony}
 // console.log(getUserWithEmail(users, 'elmahead@omatom.com')); // {об'єкт користувача Elma Head}
+
+
+// HW-15
+// 1
+// const calculateTotalBalance = users => {
+//   return users.reduce((acc,total) => acc + total.balance,0)
+// };
+
+// console.log(calculateTotalBalance(users)); // 20916
+
+// 2
+// const getUsersWithFriend = (users, friendName) => {
+//   return users.filter(person => {
+//     if (person.friends.includes(friendName) === true) {
+//       return person.name;
+//     }
+//   })
+// };
+
+// console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
+// console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
+
+// 3
+// const getNamesSortedByFriendsCount = users => {
+//   return users
+//     .sort((a, b) => a.friends.length - b.friends.length)
+//     .map(user => user.name);
+// };
+
+// console.log(getNamesSortedByFriendsCount(users));
+// // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
+
+// 4
+// const getSortedUniqueSkills = users => {
+//   return users.reduce((allSkills, user) => {
+//     user.skills.forEach(skill => {
+//       if (!allSkills.includes(skill)) {
+//         allSkills.push(skill)
+//       }
+//     });
+//     return allSkills;
+//   },[]).sort();
+// };
+
+// console.log(getSortedUniqueSkills(users));
+// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
